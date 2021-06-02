@@ -1,0 +1,172 @@
+{% extends "base/head.html" %}
+{% load static %}
+{%block title%}{{title}}{%endblock%}
+{%block style%}
+  <style media="screen">
+  .card:hover {
+    box-shadow: 5px 5px 40px aliceblue;
+  }
+  .d-block {
+    filter: brightness(50%);
+  }
+  </style>
+  {%endblock%}
+  {%block content%}
+    <section class="header">
+      <!--Carrousel-->
+      <div id="movieSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#movieSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#movieSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#movieSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/Mortal_kombat_slide.jpg' %}" class="d-block w-100" alt="Mortal Kombat">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Mortal Kombat</h5>
+          <p>
+            Un boxeador fracasado descubre un secreto familiar que lo lleva a un torneo místico llamado Mortal Kombat en el
+            que se encuentra con un grupo de guerreos que pelean a muerte para salvar a los reinos del malvado hechicero
+            Shang Tsung
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Godzilla_Kong_slide.jpg' %}" class="d-block w-100" alt="Godzilla vs Kong">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Godzilla vs Kong</h5>
+          <p>
+            Godzilla y Kong, las dos fuerzas más poderosas del planeta se enfrentan en combate impresionante que sacude
+            los cimientos de la humanidad
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/justice_leage_slide.jpg'%}" class="d-block w-100" alt="Justice Leage">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>La liga de la justicia de Snyder</h5>
+          <p>
+            Decidido a que el último sacrificio de SuperMan no sea en vano, Bruce Wayne une fuerza con Diana Prince para
+            reunir un nuevo equipo de metahumanos para proteger al mundo de una amenaza inminente
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    </section>
+
+    <!-- Content -->
+<div class="container-fluid">
+  <!-- Movies Section -->
+  <section class="movies inline">
+    <h1>Películas</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <a href="/Mortal_kombat">
+      <div class="card">
+        <img src="{% static 'images/Mortal_kombat.jpg' %}" class="card-img-top" alt="Mortal Kombat">
+        <div class="card-body">
+          <h5 class="card-title">Mortal Kombat</h5>
+          <button type="button" class="btn btn-primary" name="button">Ver</button>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/Godzilla_Kong.jpg' %}" class="card-img-top" alt="Godzilla vs Kong">
+      <div class="card-body">
+        <h5 class="card-title">Godzilla vs Kong</h5>
+        <button type="button" class="btn btn-primary" name="button">Ver</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'images/Justice_leage.jpg' %}" class="card-img-top" alt="Liga de la justicia">
+      <div class="card-body">
+        <h5 class="card-title">La liga de la Justicia de Zack Snyder</h5>
+        <button type="button" class="btn btn-primary" name="button">Ver</button>
+      </div>
+  </div>
+  </div>
+  <div class="col">
+  <div class="card">
+    <img src="{% static 'images/Raya.jpg' %}" class="card-img-top" alt="Raya y el último dragón">
+    <div class="card-body">
+      <h5 class="card-title">Raya y el último dragón</h5>
+      <button type="button" class="btn btn-primary" name="button">Ver</button>
+    </div>
+  </div>
+  </div>
+  <div class="col">
+  <div class="card">
+    <img src="{% static 'images/To_all_the_boys.jpg' %}" class="card-img-top" alt="A todos los chicos de los que me enamoré">
+    <div class="card-body">
+      <h5 class="card-title">A todos los chicos de los que me enamoré</h5>
+      <button type="button" class="btn btn-primary" name="button">Ver</button>
+    </div>
+  </div>
+  </div>
+  <div class="col">
+  <div class="card">
+    <img src="{% static 'images/Sacrificio.jpg'%}" class="card-img-top" alt="Sacrificio">
+    <div class="card-body">
+      <h5 class="card-title">Sacrificio</h5>
+      <button type="button" class="btn btn-primary" name="button">Ver</button>
+    </div>
+  </div>
+  </div>
+  <div class="col">
+  <div class="card">
+    <img src="{% static 'images/Queens.jpg' %}" class="card-img-top" alt="Érase una vez en Queens">
+    <div class="card-body">
+      <h5 class="card-title">Érase una vez en Queens</h5>
+      <button type="button" class="btn btn-primary" name="button">Ver</button>
+    </div>
+  </div>
+  </div>
+  <div class="col">
+  <div class="card">
+    <img src="{% static 'images/Maya.jpg' %}" class="card-img-top" alt="Maya y el orbe dorado">
+    <div class="card-body">
+      <h5 class="card-title">Maya y el orbe dorado</h5>
+      <button type="button" class="btn btn-primary" name="button">Ver</button>
+    </div>
+  </div>
+  </div>
+  <div class="col">
+  <div class="card">
+    <img src="{% static 'images/El_despertar.jpg' %}" class="card-img-top" alt="Maggie Simpson: El despertar de la siesta">
+    <div class="card-body">
+      <h5 class="card-title">Maggie Simpson: El despertar de la siesta</h5>
+      <button type="button" class="btn btn-primary" name="button">Ver</button>
+    </div>
+  </div>
+  </div>
+  </section>
+  <!-- Ranking section -->
+  <section class="ranked_Movies inline">
+    <h2>👑Ranking👑</h2>
+    <hr>
+    <h3>1.</h3>
+    <div class="card">
+      <img src="{% static 'images/vengadores_fin.jpg' %}" class="card-img-top" alt="Vengadores: Fin del juego">
+      <div class="card-body">
+        <h5 class="card-title">Vengadores: Fin del Juego</h5>
+        <button type="button" class="btn btn-primary" name="button">Ver</button>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+{%endblock%}

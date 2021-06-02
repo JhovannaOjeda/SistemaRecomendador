@@ -1,0 +1,41 @@
+{% extends "base/head.html" %}
+{% load static %}
+{% block title%}{{title}}{% endblock %}
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<style>
+       .bd-placeholder-img {
+         font-size: 1.125rem;
+         text-anchor: middle;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         user-select: none;
+       }
+
+       @media (min-width: 768px) {
+         .bd-placeholder-img-lg {
+           font-size: 3.5rem;
+         }
+       }
+</style>
+  {%block link%}<link href="{% static 'css/signin.css' %}" rel="stylesheet">{%endblock%}
+{% block content%}
+<div class="container">
+
+  <main class="form-signin">
+  <form>
+    <img class="d-block mx-auto mb-4" src="{% static 'images/MoviesHub.png' %}" alt="logo" style="filter: brightness(100%); border-radius:10%;">
+    <h1 class="h3 mb-3 fw-normal">Inicie sesión</h1>
+
+    <div class="form-floating">
+    <label for="correo">Correo:</label>
+      <input type="email" class="form-control" id="email" placeholder="Correo" required>
+    </div>
+    <div class="form-floating">
+    <label for="Password">Contraseña:</label>
+      <input type="password" class="form-control" id="Password" placeholder="Contraseña" required>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" style="margin-top: 10px;" type="submit">Inicio</button>
+  </form>
+</main>
+</div>
+{% endblock %}

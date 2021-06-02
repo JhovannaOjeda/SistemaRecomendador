@@ -1,0 +1,5 @@
+Head blocks:
+- Link
+- Title
+- Style
+- Content

@@ -1,0 +1,66 @@
+body {
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+h1, h2{
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  max-height: 100px;
+}
+
+
+.card {
+  background-color: inherit;
+  border: none;
+  color: white;
+}
+
+.header {
+  margin-bottom: 5%;
+}
+
+.inline{
+  display: inline-block;
+}
+
+.movie {
+  margin: 5% 0;
+}
+
+.movie:hover{
+  box-shadow: 0px 0px 50px whitesmoke;
+}
+
+.moviePic {
+  width: 300px;
+}
+
+.movies {
+  width: 70%;
+}
+
+.proImage {
+  max-width: 100px;
+  zoom: 300%;
+}
+
+.ranked_Movies {
+  border-radius: 3%;
+  margin-left: 50px;
+  padding: 20px;
+  width: 25%;
+}
