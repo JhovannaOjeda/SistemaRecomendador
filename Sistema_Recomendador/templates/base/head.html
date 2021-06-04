@@ -4,6 +4,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'images/icono.ico' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 {% block link%}{% endblock %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
@@ -13,7 +14,7 @@
     <!--nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="{% url 'home:index'%}">
       <img src="{% static 'images/icono.png'%}" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
       MoviesHub
     </a>
@@ -23,9 +24,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'home:index'%}">Inicio</a>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="peliculasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Peliculas
           </a>
@@ -34,14 +35,14 @@
             <li><a class="dropdown-item" href="#">Ranking</a></li>
             <li><a class="dropdown-item" href="#">Mas vistas</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
-      <form class="d-flex">
+      <!-- <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-        <a href="/inicio_sesion"><button type="button" class="btn btn-primary" name="Inicio de sesión" style="margin: auto 15px;">Inicio de sesión</button></a>
-        <a href="/registro"><button type="button" class="btn btn-outline-primary" name="Registro">Registro</button></a>
+      </form> -->
+        <a href="{% url 'home:inicio'%}"><button type="button" class="btn btn-primary" name="Inicio de sesión" style="margin: auto 15px;">Inicio de sesión</button></a>
+        <a href="{% url 'home:registro'%}"><button type="button" class="btn btn-outline-primary" name="Registro">Registro</button></a>
     </div>
   </div>
 </nav>

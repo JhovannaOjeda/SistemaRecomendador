@@ -1,6 +1,6 @@
 {% extends "base/head.html" %}
 {% load static %}
-{% block title%}{{title}}{% endblock %}
+{% block title%}Inicio de sesión{% endblock %}
 <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <style>
        .bd-placeholder-img {
@@ -22,9 +22,10 @@
 <div class="container">
 
   <main class="form-signin">
-  <form>
+  <form class="needs-validation form_signin" method="POST" enctype="multipart/form-data" style="text-align:initial" novalidate>
     <img class="d-block mx-auto mb-4" src="{% static 'images/MoviesHub.png' %}" alt="logo" style="filter: brightness(100%); border-radius:10%;">
     <h1 class="h3 mb-3 fw-normal">Inicie sesión</h1>
+        {% csrf_token %}
 
     <div class="form-floating">
     <label for="correo">Correo:</label>
