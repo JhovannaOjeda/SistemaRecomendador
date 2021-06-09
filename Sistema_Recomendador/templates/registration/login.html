@@ -23,22 +23,25 @@
 <div class="container">
 
   <main class="form-signin">
-  <form class="needs-validation form_signin" method="POST" enctype="multipart/form-data" style="text-align:center" novalidate>
+  <form class="needs-validation form_signin" method="POST" enctype="multipart/form-data" style="text-align:initial" novalidate>
     <img class="d-block mx-auto mb-4" src="{% static 'images/MoviesHub.png' %}" alt="logo" style="filter: brightness(100%); border-radius:10%;">
     <h1 class="h3 mb-3 fw-normal">Inicie sesión</h1>
         {% csrf_token %}
     <div class="form-floating">
-    <label>Nombre de usuario:</label>
-      {{ form.username }}
-      {{ form.username.help_text }}
+    <label for="correo">Correo:</label>
+      <input type="email" class="form-control" id="email" placeholder="Correo" name="username" required>
     </div>
     <div class="form-floating">
-    <label>Contraseña:</label>
-      {{ form.password }}
-      {{ form.password.help_text }}
+    <label for="Password">Contraseña:</label>
+      <input type="password" class="form-control" id="Password" placeholder="Contraseña" name="password" required>
     </div>
     <button class="w-100 btn btn-lg btn-primary" style="margin-top: 10px;" type="submit">Ingresar</button>
   </form>
 </main>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button class="btn btn-primary btn-lg" type="submit" name="button">Ingresar</button>
+</form>
 </div>
 {% endblock %}

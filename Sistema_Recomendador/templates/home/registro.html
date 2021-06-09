@@ -2,6 +2,7 @@
 {% load static %}
 {% block title%}Registro{% endblock %}
 {% block content %}
+
 <div class="container" style="text-align:center;">
     <section id="registro" class="inline">
       <div class="py-5 text-center">
@@ -15,21 +16,21 @@
           <form class="needs-validation form_signin" method="POST" enctype="multipart/form-data" style="text-align:initial" novalidate>
             {% csrf_token %}
             <!-- {{ form.as_p }} -->
-            <div class="row">
+            <div class="row" style="padding-top:30px;">
               <div class="col-6">
                 <label for="id_nombre" class="form-label">Nombre:</label>
-                {{ form.name }}
+                {{ form.first_name }}
                 {{ form.help_text }}
               </div>
               <div class="col-6">
                 <label for="id_nombre" class="form-label">Apellidos:</label>
-                {{ form.lastname }}
+                {{ form.last_name }}
                 {{ form.help_text }}
               </div>
             </div>
             <div class="row" style="padding-top:30px;">
               <div class="col-6">
-                <label for="id_nombre" class="form-label">Nombre de Usuario:</label>
+                <label for="id_nombre" class="form-label">Nombre de Usuarios:</label>
                 {{ form.username }}
                 {{ form.help_text }}
               </div>
@@ -39,7 +40,6 @@
                 {{ form.help_text }}
               </div>
             </div>
-
             <div class="row" style="padding-top:30px;">
               <div class="col-6">
                 <label for="id_nombre" class="form-label">Contraseña:</label>

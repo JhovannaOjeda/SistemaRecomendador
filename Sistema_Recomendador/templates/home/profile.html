@@ -1,0 +1,34 @@
+{% extends "base/head.html" %}
+
+{% block title%}Perfil{% endblock %}
+
+{% block content%}
+<div class="container" style="text-align:center; background-color: black; margin-top:5%; padding-bottom:3%">
+  <div class="row">
+    <div class="col" style="margin-top:5%">
+      <h5>Nombre:</h5>
+      {{user.first_name}}
+    </div>
+    <div class="col" style="margin-top:5%">
+      <h5>Apellidos:</h5>
+      {{user.last_name}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" style="margin-top:5%">
+      <h5>Nombre de usuario:</h5>
+      {{user.username}}
+    </div>
+    <div class="col" style="margin-top:5%">
+      <h5>Correo:</h5>
+      {{user.email}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" style="margin-top:5%">
+      <h5>Se unió:</h5>
+      {{user.date_joined}}
+    </div>
+  </div>
+</div>
+{% endblock %}
