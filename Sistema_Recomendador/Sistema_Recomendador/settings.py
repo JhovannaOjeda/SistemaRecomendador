@@ -84,19 +84,19 @@ WSGI_APPLICATION = 'Sistema_Recomendador.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'MoviesHub',
-        'USER': 'JhovannaO',
-        'PASSWORD': 'harspiel3.0',
-        'HOST': 'localhost',
-        'PORT': '1433',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        },
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'sql_server.pyodbc',
+#         'NAME': 'MoviesHub',
+#         'USER': 'Gambino',
+#         'PASSWORD': 'Colgate12',
+#         'HOST': 'localhost',
+#         'PORT': '1433',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#         },
+#     }
+# }
 
 
 # Password validation
